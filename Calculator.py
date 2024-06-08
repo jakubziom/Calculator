@@ -21,16 +21,15 @@ if action == 1 or action==3:
 
     elements_list=[]
 
-    for i in range(0,elements):
-        elements_list.append(0)
-
-    for i in range(0,elements):
+    while len(elements_list) < elements:
         try:
-            elements_list[i] = float(input('Podaj składnik ' + str(i+1) +':'))
+            number = float(input('Podaj składnik ' + str(len(elements_list)+1) +':'))
+            elements_list.append(number)
+            #print(elements_list)
             continue
         except:
-            print("Proszę podać liczbę, program uznał, że wpisałeś zero")
-
+            print("Proszę podać liczbę")
+      
 
 if action == 2 or action==4:
     while True:
