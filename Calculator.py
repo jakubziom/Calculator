@@ -15,6 +15,9 @@ if action == 1 or action==3:
     while True:
         try:
             elements= int(input('Ile składników chcesz użyć?'))
+            if elements < 2:
+                print("Proszę podać ilość składników większą lub równą 2")
+                continue
             break
         except:
             print("Proszę podać liczbę całkowitą")
